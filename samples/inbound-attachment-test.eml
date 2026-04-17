@@ -1,0 +1,20 @@
+Message-ID: <local-inbound-attachment-test@brightex.cc>
+Date: Fri, 17 Apr 2026 09:30:00 +0000
+From: Sender <sender@example.com>
+To: Tom <tom@brightex.cc>
+Subject: inbound attachment test
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="cf-mail-attachment-boundary"
+
+--cf-mail-attachment-boundary
+Content-Type: text/plain; charset="utf-8"
+
+hello with attachment
+
+--cf-mail-attachment-boundary
+Content-Type: text/plain; name="notes.txt"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="notes.txt"
+
+aGVsbG8gZnJvbSBhdHRhY2htZW50Cg==
+--cf-mail-attachment-boundary--

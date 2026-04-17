@@ -1,0 +1,12 @@
+node_modules
+.npm-cache
+.wrangler
+.dev.vars
+.env
+.env.*
+.home
+.tmp
+.DS_Store
+worker-configuration.d.ts
+wrangler.jsonc
+agent.md

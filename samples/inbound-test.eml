@@ -1,0 +1,9 @@
+Message-ID: <local-inbound-test@brightex.cc>
+Date: Fri, 17 Apr 2026 09:00:00 +0000
+From: Sender <sender@example.com>
+To: Alpha <alpha@example.com>, Inbox <inbox@brightex.cc>
+Cc: Observer <observer@example.com>
+Subject: local inbound test
+Content-Type: text/plain; charset="utf-8"
+
+hello from inbound email

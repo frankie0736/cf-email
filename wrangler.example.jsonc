@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Required when your Wrangler login can access multiple Cloudflare accounts.
+  "account_id": "YOUR_CLOUDFLARE_ACCOUNT_ID",
+  "name": "brightex-mailbox",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-04-17",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "APP_NAME": "brightex.cc mailbox",
+    "MAIL_FROM": "inbox@brightex.cc",
+    "AUTO_REPLY_ENABLED": "false"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "brightex-mailbox",
+      // Replace this after `bunx wrangler d1 create brightex-mailbox`.
+      "database_id": "YOUR_D1_DATABASE_ID",
+      // Local-only database ID for `wrangler dev` and `verify:local`.
+      "preview_database_id": "brightex-mailbox-local",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "ATTACHMENTS",
+      "bucket_name": "brightex-mailbox-attachments"
+    }
+  ],
+  "send_email": [
+    {
+      "name": "SEND_EMAIL"
+    }
+  ]
+}
